@@ -2,18 +2,19 @@
 
 @section("content")
 
+<section class="vh-100" style="background-color: #508bfc;">
+    <h1 style="color: black; text-align:center;">eCounter</h1>
     <nav class="navbar navbar-default">
-        <div class="container-fluid" style="background-color: rgb(130, 10, 209);">
-            <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container-fluid">
             <div class="navbar-header">
                 <img src="/img/logo.png" width="120" style="margin-top: -16px;"/>
             </div>
-            <button onclick="javascript:rota('/evento')" type="button" class="btn btn-primary btn-sm btn-block"><img src="/img/note.png"><br>Eventos</button>
-            <button onclick="javascript:rota('/logout')" type="button" class="btn btn-warning btn-sm btn-block"><img src="/img/Exit.png"><br>Sair</button>
+            <button onclick="javascript:rota('/evento')" type="button" class="btn btn-success btn-sm"><img src="/img/note.png"><br>Eventos</button>
+            <button onclick="javascript:rota('/logout')" type="button" class="btn btn-warning btn-sm"><img src="/img/Exit.png"><br>Sair</button>
 
-<br>
         </div>
     </nav>
+	<hr>
     <div class="container-fluid">
     <div class="row">
         @foreach($listaDeEventos as $e)        
@@ -43,6 +44,7 @@
         @endforeach
     </div>
     </div>
+</section>
 @endsection
 @section("script")            
     $('.counter').each(function () {
