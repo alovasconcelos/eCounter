@@ -1,15 +1,17 @@
 @extends('template')
 
 @section("content")
-    <h2>Eventos</h2>
+<section class="vh-100">
+    <h3 style="color: black; text-align:center;">eCounter</h3>
 
-    <div class="row">
+    <h3 style="text-align:center;">Eventos</h3>
+    <div style="text-align:center;">
         <div class="btn-group" role="group">
-            <button onclick="javascript:rota('/');" type="button" class="btn btn-primary btn-lg" style="width:100px !important!;"><img src="/img/previous.png"><br>Voltar</button>
-            <button class="btn btn-primary btn-lg" style="width:100px !important;" onclick='javascript:incluiEvento();'><img src="/img/add.png"><br>Incluir</button>
+            <button onclick="javascript:rota('/');" type="button" class="btn btn-success btn-lg" style="width:120px !important!;"><img src="/img/previous.png"><br>Voltar</button>
+            <button class="btn btn-success btn-lg" style="width:120px !important;" onclick='javascript:incluiEvento();'><img src="/img/add.png"><br>Incluir</button>
         </div>
     </div>
-<hr>
+    <hr>
     <div class="row">
         <table class="table table-sm" width="100%">
             <thead class="thead-dark">
@@ -32,6 +34,7 @@
             </tbody>
         </table>
     </div>
+</section>
     <script>
         function editaEvento(id) {
             var url = "/evento.edit." + id;
