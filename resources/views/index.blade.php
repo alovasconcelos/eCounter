@@ -2,15 +2,17 @@
 
 @section("content")
 
-<section class="vh-100" style="background-color: #508bfc;">
+<section class="vh-100">
     <h1 style="color: black; text-align:center;">eCounter</h1>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
                 <img src="/img/logo.png" width="120" style="margin-top: -16px;"/>
             </div>
-            <button onclick="javascript:rota('/evento')" type="button" class="btn btn-success btn-sm"><img src="/img/note.png"><br>Eventos</button>
-            <button onclick="javascript:rota('/logout')" type="button" class="btn btn-warning btn-sm"><img src="/img/Exit.png"><br>Sair</button>
+		<div class="btn-group" role="group">
+            <button onclick="javascript:rota('/evento')" type="button" class="btn btn-success btn-lg" style="width:100px !important;"><img src="/img/note.png"><br>Eventos</button>
+            <button onclick="javascript:rota('/logout')" type="button" class="btn btn-success btn-lg" style="width:100px !important;"><img src="/img/Exit.png"><br>Sair</button>
+		</div>
 
         </div>
     </nav>

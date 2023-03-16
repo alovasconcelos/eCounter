@@ -5,10 +5,11 @@
 
     <div class="row">
         <div class="btn-group" role="group">
-            <button onclick="javascript:rota('/');" type="button" class="btn btn-primary col-12 text-left"><i class="fas fa-home"></i> Voltar</button>
-            <button class="btn btn-danger col-12 text-left" onclick='javascript:incluiEvento();'><i class="fas fa-plus-square"></i> Incluir</button>
+            <button onclick="javascript:rota('/');" type="button" class="btn btn-primary btn-lg" style="width:100px !important!;"><img src="/img/previous.png"><br>Voltar</button>
+            <button class="btn btn-primary btn-lg" style="width:100px !important;" onclick='javascript:incluiEvento();'><img src="/img/add.png"><br>Incluir</button>
         </div>
     </div>
+<hr>
     <div class="row">
         <table class="table table-sm" width="100%">
             <thead class="thead-dark">
