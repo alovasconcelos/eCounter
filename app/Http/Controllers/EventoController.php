@@ -78,8 +78,8 @@ class EventoController extends Controller
         $ce = new ContadorEvento();
         $ce->evento_id = $idEvento;
         $ce->save();
-        $e = Evento::find($idEvento);
-        return $e->qtd();
+        $qtd = ContadorEvento::where('evento_id', $idEvento)->count();
+        return $qtd;
     }
     public function dec (Request $req) {
         $idEvento = $req['id'];
@@ -89,7 +89,7 @@ class EventoController extends Controller
 		if ($ce) {
 			$ce->delete();
 		}
-        $e = Evento::find($idEvento);
-        return $e->qtd();
+        $qtd = ContadorEvento::where('evento_id', $idEvento)->count();
+        return $qtd;
     }
 }

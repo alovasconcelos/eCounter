@@ -16,8 +16,8 @@
     </div>
     <div style="text-align:center;">
         <div class="btn-group" role="group">
-            <button type="submit" class="btn btn-danger"><img src="/img/save.png">Salvar</button>
-            <button onclick="javascript:rota('/evento');" type="button" class="btn btn-primary"><img src="/img/previous.png">Voltar</button>
+            <button type="submit" class="btn btn-danger"><img src="/img/save.png"><br>Salvar</button>
+            <button onclick="javascript:rota('/evento');" type="button" class="btn btn-primary"><img src="/img/previous.png"><br>Voltar</button>
         </div>
     </div>
   </form>
