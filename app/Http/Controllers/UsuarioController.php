@@ -15,7 +15,11 @@ class UsuarioController extends Controller
         $e = new Usuario();
         $e->login = $req['login'];            
         $e->senha = md5($req['senha']);            
-        $e->save();
+	try {
+            $e->save();
+	} catch (\Exception $e) {
+            return redirect()->back()->with('err', 'Usu&aacute;rio j&aacute; foi cadastrado');
+	}
  
         return redirect('/login');
     }

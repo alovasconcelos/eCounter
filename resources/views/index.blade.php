@@ -6,8 +6,8 @@
     <h3 style="color: black; text-align:center;">eCounter</h3>
     <div style="text-align:center;">
 		<div class="btn-group" role="group">
-            <button onclick="javascript:rota('/evento')" type="button" class="btn btn-success btn-lg" style="width:100px !important;"><img src="/img/note.png"><br>Eventos</button>
-            <button onclick="javascript:rota('/logout')" type="button" class="btn btn-success btn-lg" style="width:100px !important;"><img src="/img/Exit.png"><br>Sair</button>
+            <button onclick="javascript:rota('/evento')" type="button" class="btn btn-success btn-lg" style="width:120px !important;"><img src="/img/note.png"><br>Eventos</button>
+            <button onclick="javascript:rota('/logout')" type="button" class="btn btn-primary btn-lg" style="width:120px !important;"><img src="/img/Exit.png"><br>Sair</button>
 		</div>
 
     </div>
