@@ -8,4 +8,5 @@ class ContadorEvento extends BaseModel
 {
     use HasFactory;
     protected $table = 'ContadorEvento';
+
 }

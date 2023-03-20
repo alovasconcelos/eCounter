@@ -116,7 +116,8 @@
                 method: "get",
                 url: "/evento.inc."+id,
                 success: function (data) {
-                    $('#sp' + id).html(data);
+                    $('#sp' + id).html(parseInt($('#sp1').html()) + 1);
+		    $('#spUltimo' + id).html(data);
                 }
             });
        }
@@ -125,7 +126,10 @@
                 method: "get",
                 url: "/evento.dec."+id,
                 success: function (data) {
-                    $('#sp' + id).html(data);
+		    if ($('#sp1').html() >  0) {
+	                $('#sp' + id).html(parseInt($('#sp1').html()) - 1);
+		        $('#spUltimo' + id).html(data);
+		    }
                 }
             });
        }

@@ -19,6 +19,7 @@
             <div class="card border-left-danger shadow h-100 py-2" style="background-color: #{{$e->cor}}!important;">
                 <div class="card-header py-3" style="background-color: #{{$e->cor}}!important;">
                     <h5 class="m-0 font-weight-bold text-primary">{{$e->descricao}}</h5>
+		    <span id="spUltimo{{$e->id}}"><small>{{App\Models\Evento::ultimo($e->id)}}</small></span>
                 </div>
                 <div class="card-body">
                     <table width="100%">

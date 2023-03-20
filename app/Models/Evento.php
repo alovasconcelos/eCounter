@@ -9,8 +9,20 @@ class Evento extends BaseModel
     use HasFactory;
     protected $table = 'Evento';
 
-    public function Qtd() {
+    public function qtd() {
         $qtd = ContadorEvento::where('evento_id', $this->id)->count();
         return $qtd;
     }
+
+    public static function ultimo($idEvento) {
+        $ce = ContadorEvento::where('evento_id', $idEvento)
+						->latest('id')
+						->first();
+	if ($ce) {
+	    $timestamp = strtotime($ce->hora);
+	    return date('d/m/Y H:i', $timestamp);
+	}
+        return 'sem registro'; 
+    }
+    
 }
