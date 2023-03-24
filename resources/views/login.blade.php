@@ -11,12 +11,12 @@
             <img src="/img/logo.png"><h3 class="mb-5">eCounter</h3>
             <form name="formLogin" method="post" action="/validaLogin">
                 @csrf
-                <div class="form-outline mb-4">
+                <div class="form-outline mb-4" style="display:none;">
                 <input type="text" id="ec_login" name="ec_login" class="form-control form-control-lg" placeholder="informe o seu login" readonly onfocus="this.removeAttribute('readonly');" onblur="this.setAttribute('readonly','');" />
                 </div>
 
                 <div class="form-outline mb-4">
-                <input type="password" id="ec_senha" name="ec_senha" class="form-control form-control-lg" placeholder="informe a senha" readonly onfocus="this.removeAttribute('readonly');" onblur="this.setAttribute('readonly','');" />
+                <input type="password" id="ec_senha" name="ec_senha" class="form-control form-control-lg" placeholder="PIN" readonly onfocus="this.removeAttribute('readonly');" onblur="this.setAttribute('readonly','');" />
                 </div>
 
                 <button class="btn btn-primary btn-lg btn-block" type="submit">Entrar</button>

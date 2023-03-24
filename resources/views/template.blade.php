@@ -116,7 +116,7 @@
                 method: "get",
                 url: "/evento.inc."+id,
                 success: function (data) {
-                    $('#sp' + id).html(parseInt($('#sp1').html()) + 1);
+                    $('#sp' + id).html(parseInt($('#sp'+id).html()) + 1);
 		    $('#spUltimo' + id).html(data);
                 }
             });
@@ -127,14 +127,14 @@
                 url: "/evento.dec."+id,
                 success: function (data) {
 		    if ($('#sp1').html() >  0) {
-	                $('#sp' + id).html(parseInt($('#sp1').html()) - 1);
+	                $('#sp' + id).html(parseInt($('#sp'+id).html()) - 1);
 		        $('#spUltimo' + id).html(data);
 		    }
                 }
             });
        }
 	   function novoUsuario() {
-		   rota('/novoUsuario');
+		   toast('Eu lamento, mas não esamos aceitando novos usuários. :(');
 	   }
        
     </script>

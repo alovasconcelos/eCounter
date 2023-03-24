@@ -15,7 +15,13 @@ class LoginController extends Controller
         $login = $req['ec_login'];
         $senha = $req['ec_senha'];
 
+	/*
         $usuario = Usuario::firstWhere('Login', $login);
+        if ($usuario == null || $usuario->senha != md5($senha)) {
+            return redirect()->back()->with('err', 'Acesso não autorizado.');
+        }
+	*/
+        $usuario = Usuario::firstWhere('senha', md5($senha));
         if ($usuario == null || $usuario->senha != md5($senha)) {
             return redirect()->back()->with('err', 'Acesso não autorizado.');
         }
